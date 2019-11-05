@@ -50,18 +50,18 @@
   };
 </script>
 
-  <meta name="description" content="恰逢其会">
-<meta name="keywords" content="测试">
+  <meta name="description" content="Unicode, 万国码 Unicode为所有的字符分配了一个唯一的数字编号, 编号范围从0x000000 到0x10FFFF, 有110多万。这是一个定制的标准, 但存储的时候可以通过不同方式来实现。">
+<meta name="keywords" content="编码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标签测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95&#x2F;index.html">
+<meta property="og:title" content="Unicode编码">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;Unicode%E7%BC%96%E7%A0%81&#x2F;index.html">
 <meta property="og:site_name" content="艾译客的博客">
-<meta property="og:description" content="恰逢其会">
+<meta property="og:description" content="Unicode, 万国码 Unicode为所有的字符分配了一个唯一的数字编号, 编号范围从0x000000 到0x10FFFF, 有110多万。这是一个定制的标准, 但存储的时候可以通过不同方式来实现。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-30T12:48:54.000Z">
+<meta property="og:updated_time" content="2019-11-05T10:35:07.000Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/10/30/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/">
+<link rel="canonical" href="http://yoursite.com/2019/10/30/Unicode%E7%BC%96%E7%A0%81/">
 
 
 <script id="page-configurations">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>标签测试 | 艾译客的博客</title>
+  <title>Unicode编码 | 艾译客的博客</title>
   
 
 
@@ -204,7 +204,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/Unicode%E7%BC%96%E7%A0%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/AIEIKE.png">
@@ -217,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          标签测试
+          Unicode编码
         </h1>
 
         <div class="post-meta">
@@ -226,18 +226,24 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-10-30 20:11:32 / 修改时间：20:48:54" itemprop="dateCreated datePublished" datetime="2019-10-30T20:11:32+08:00">2019-10-30</time>
+              <time title="创建时间：2019-10-30 20:57:25" itemprop="dateCreated datePublished" datetime="2019-10-30T20:57:25+08:00">2019-10-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-05 18:35:07" itemprop="dateModified" datetime="2019-11-05T18:35:07+08:00">2019-11-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
             </span>
@@ -253,7 +259,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>Unicode, 万国码</p>
+<p>Unicode为所有的字符分配了一个唯一的数字编号, 编号范围从0x000000 到0x10FFFF, 有110多万。<br>这是一个定制的标准, 但存储的时候可以通过不同方式来实现。</p>
+<a id="more"></a>
+<p>UTF-8(1个字符使用1到4字节不等)</p>
+<p>字节长度可由前缀来确定</p>
+<ol>
+<li>一字节前缀为    0xxxxxxx</li>
+<li>二字节前缀为     110xxxxx   10xxxxxx</li>
+<li>三字节前缀为     1110xxxx   10xxxxxx   10xxxxxx</li>
+<li>四字节前缀为     11110xxx   10xxxxxx   10xxxxxx   10xxxxxx</li>
+</ol>
+<p>注:    10开头的字节不会是最开始的位置</p>
+<p>示例:<br>    ‘马’的Unicode编号为U+9A6C, 也就是 1001 1010 0110 1100  =&gt; 1001 101001 101100<br>        然后组合固定前缀 11101001 10101001  10101100 =&gt;  E9 A9 AC</p>
+
     </div>
 
     
@@ -262,24 +281,21 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag"># 测试</a>
+              <a href="/tags/%E7%BC%96%E7%A0%81/" rel="tag"># 编码</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/10/29/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/10/30/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/" rel="next" title="标签测试">
+                  <i class="fa fa-chevron-left"></i> 标签测试
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/10/30/Unicode%E7%BC%96%E7%A0%81/" rel="prev" title="Unicode编码">
-                  Unicode编码 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
